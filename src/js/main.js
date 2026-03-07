@@ -21,10 +21,9 @@ if (toggle && navLinks) {
 const currentPath = window.location.pathname;
 document.querySelectorAll('.nav__links a').forEach(link => {
   const href = link.getAttribute('href');
-  if (
-    (href === '/' && (currentPath === '/' || currentPath === '/index.html')) ||
-    (href !== '/' && currentPath.includes(href.replace('.html', '')))
-  ) {
+  const page = currentPath.split('/').pop() || 'index.html';
+  const linkPage = href === './' ? 'index.html' : href.replace('./', '');
+  if (page === linkPage || (page === '' && linkPage === 'index.html')) {
     link.classList.add('active');
   }
 });
