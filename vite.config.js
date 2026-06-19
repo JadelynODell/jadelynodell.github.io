@@ -14,6 +14,7 @@ export default defineConfig({
         video: resolve(__dirname, 'src/video.html'),
         audio: resolve(__dirname, 'src/audio.html'),
         photography: resolve(__dirname, 'src/photography.html'),
+        social: resolve(__dirname, 'src/social.html'),
         contact: resolve(__dirname, 'src/contact.html'),
       },
     },

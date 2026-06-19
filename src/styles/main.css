@@ -365,6 +365,28 @@ main {
   padding: 0.5rem;
 }
 
+/* ── Social Page (Instagram embeds) ── */
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(326px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 1rem 0 3rem;
+}
+
+.social-grid__item {
+  display: flex;
+  justify-content: center;
+}
+
+/* Instagram's embed sets inline styles; keep it from overflowing the cell */
+.social-grid .instagram-media {
+  margin: 0 !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 540px !important;
+}
+
 /* ── Contact Page ── */
 .contact-section {
   display: grid;
